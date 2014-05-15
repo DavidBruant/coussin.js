@@ -1,33 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ceci n'est pas un coussin</title>
-  <style type="text/css">
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      font-family: sans-serif;
-      text-align: center;
-    }
+    <head>
+        <meta charset="utf-8">
 
-    #sigma-scene {
-      height: 400px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <p>Drop a GEXF or JSON graph file in this web page</p>
-    <div id="sigma-scene"></div>
-  </div>
+        <title>Ceci n'est pas un coussin</title>
+        <style data-better-defaults>
+            *{
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
 
-  <script src="js/sigma-v1.0.1.min.js"></script>
-  <script src="js/sigma.parsers.gexf.min.js"></script>
-  <script src="js/sigma.parsers.json.min.js"></script>
-  <script>
-    (function() {
-      // TODO
-    })();
-  </script>
-</body>
+                box-sizing: border-box;
+                border-collapse: collapse;
+            }
+
+            [hidden] { /* http://lists.whatwg.org/pipermail/whatwg-whatwg.org/2014-May/254198.html */
+                display: none !important;
+            }
+
+
+            html, body{
+                padding: 0;
+                margin: 0;
+            }
+
+            /* For non-documents */
+            ul, ol, menu{
+                list-style: none;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            li{
+                margin: 0;
+                padding: 0;
+            }
+
+            .table-layout{
+                display: table;
+            }
+            .table-layout > *{
+                display: table-row;
+            }
+            .table-layout > * > *{
+                display: table-cell;
+            }
+
+
+        </style>
+
+
+        <style>
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+            #sigma-scene {
+                height: 400px;
+            }
+        </style>
+        
+        
+
+        <script defer src="js/sigma-v1.0.1.min.js"></script>
+        <script defer src="js/sigma.parsers.gexf.min.js"></script>
+        <script defer src="js/sigma.parsers.json.min.js"></script>
+        
+        <script defer src="js/dragAndDrop.js"></script>
+        
+    </head>
+    <body>
+        <div class="container">
+            <p>Drop a GEXF or JSON graph file in this web page</p>
+            <div id="sigma-scene"></div>
+        </div>
+    </body>
 </html>
