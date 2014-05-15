@@ -2,8 +2,32 @@
 <html>
 <head>
   <title>Ceci n'est pas un coussin</title>
+  <style type="text/css">
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    #sigma-scene {
+      height: 400px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <p>Drop a GEXF or JSON graph file in this web page</p>
+    <div id="sigma-scene"></div>
+  </div>
 
+  <script src="js/sigma-v1.0.1.min.js"></script>
+  <script src="js/sigma.parsers.gexf.min.js"></script>
+  <script src="js/sigma.parsers.json.min.js"></script>
+  <script>
+    (function() {
+      // TODO
+    })();
+  </script>
 </body>
 </html>
