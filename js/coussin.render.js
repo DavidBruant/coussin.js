@@ -1,8 +1,8 @@
 ;(function(global) {
     global.coussin = global.coussin || {};
-    global.coussin.render(name, content, container) {
+    global.coussin.render = function(name, content, container) {
+        var graph;
         switch (name.split('.').pop().toLowerCase()) {
-            var graph;
 
             case 'gexf':
                 try {

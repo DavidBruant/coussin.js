@@ -8,7 +8,7 @@
     }
 
     console.log('adding listener');
-    
+
     document.body.addEventListener('drop', function(e) {
         e.stopPropagation();
         e.preventDefault();
@@ -19,7 +19,7 @@
         var reader = new FileReader();
 
         reader.addEventListener('load', function(e){
-            coussin.render(file.name, e.target.result, document.querySelector('sigma-scene'));
+            coussin.render(file.name, e.target.result, document.querySelector('#sigma-scene'));
         });
 
         reader.readAsText(file);
